@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Formulate</string>
+    <string-array name="formulas">
+        <item>"A+b=c"</item>
+        <item>"A-b=c"</item>
+        <item>"A*b=c"</item>
+        <item>"A/b=c"</item>
+        <item>"A++b=c"</item>
+        <item>"A**b=c"</item>
+
+    </string-array>
+</resources>
