@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         }
-
+        // comments add
     private void randomdata() {
         for(int i=0;i<=10;i++){
             String name= UUID.randomUUID().toString();
@@ -84,3 +84,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,Input.class));
     }
 }
+
+
+
