@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-//bhaskar added new comment
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<Cards> arrayList=new ArrayList<Cards>();
