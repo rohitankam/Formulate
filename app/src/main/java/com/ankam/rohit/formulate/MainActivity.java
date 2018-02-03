@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+//bhaskar added new comment
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<Cards> arrayList=new ArrayList<Cards>();
@@ -71,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         }
-        // comments add
     private void randomdata() {
         for(int i=0;i<=10;i++){
             String name= UUID.randomUUID().toString();
