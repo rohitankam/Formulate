@@ -10,26 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Formula">
         <activity android:name=".SplashScreen">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Formula"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop"
+            android:theme="@style/Formula" />
         <activity
             android:name=".Formula"
-            android:theme="@style/Formula"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop"
+            android:theme="@style/Formula" />
         <activity
             android:name=".Input"
             android:theme="@style/Formula" />
         <activity
-            android:name=".Matrix_Calc"/>
-
+            android:name=".Matrix_Calc"
+            android:launchMode="singleTop"
+            android:theme="@style/Matrix"/>
     </application>
 
 </manifest>

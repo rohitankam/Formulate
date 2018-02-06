@@ -4,5 +4,8 @@
     <color name="colorPrimaryDark">#8b1616</color>
     <color name="colorAccent">#be1f1f</color>
     <color name="color_background">#e4bdbd</color>
-    <color name="colorSecondary">#16188b</color>
+
+    <color name="matrixPrimary">#4de140</color>
+    <color name="matrixDark">#216e1a</color>
+    <color name="matrixBack">#b5faaf</color>
 </resources>
