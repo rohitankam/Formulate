@@ -142,18 +142,19 @@ public class Formula extends AppCompatActivity implements NavigationView.OnNavig
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.form) {
             // Handle the camera action
+            NavUtils.getParentActivityIntent(Formula.this);
         } else if (id == R.id.nav_gallery) {
+            startActivity(new Intent(this,Matrix_Calc.class));
 
         } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+
+        } else if (id == R.id.tic_tac) {
 
         }
 
