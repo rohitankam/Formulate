@@ -1,12 +1,23 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="Formula" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:colorForeground">@color/color_material</item>
+        <item name="android:colorForeground">@color/color_background</item>
+        <item name="android:colorSecondary">@color/colorSecondary</item>
     </style>
+
+    <style name="Matrix" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#4de140</item>
+        <item name="colorPrimaryDark">#216e1a</item>
+        <item name="colorAccent">#2cd91d</item>
+        <item name="android:background">#b5faaf</item>
+        <item name="android:colorSecondary">#7b0b0b</item>
+    </style>
+
 
 </resources>

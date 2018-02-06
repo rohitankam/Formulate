@@ -1,126 +1,49 @@
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--xmlns:tools="http://schemas.android.com/tools"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="match_parent"-->
-<!--tools:context="com.ankam.rohit.formulate.Matrix_Calc">-->
-
-<!--<GridView-->
-<!--android:id="@+id/gridview"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="match_parent"-->
-<!--android:columnWidth="90dp"-->
-<!--android:numColumns="auto_fit"-->
-<!--android:verticalSpacing="10dp"-->
-<!--android:horizontalSpacing="10dp"-->
-<!--android:stretchMode="columnWidth"-->
-<!--android:gravity="center"-->
-<!--/>-->
-
-<!--</android.support.constraint.ConstraintLayout>-->
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@ref/0x01060019"
-    android:layout_width="-1"
-    android:layout_height="-1">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ankam.rohit.formulate.Matrix_Calc">
 
-    <TextView
-        android:textAppearance="@attr/0x1010040"
-        android:id="@ref/0x7f0d007f"
-        android:layout_width="-2"
-        android:layout_height="-2"
-        android:layout_marginLeft="dimension(14593)"
-        android:layout_marginTop="dimension(7937)"
-        android:text="Main Activity"
-        android:layout_alignLeft="@ref/0x7f0d0080"
-        android:layout_alignParentTop="true" />
+    <GridLayout
+        android:id="@+id/gridView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:columnCount="2"
+        android:columnWidth="4dp"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-    <EditText
-        android:id="@ref/0x7f0d0080"
-        android:layout_width="dimension(64001)"
-        android:layout_height="-2"
-        android:layout_marginTop="dimension(3841)"
-        android:hint="Name"
-        android:ems="10"
-        android:layout_below="@ref/0x7f0d007f"
-        android:layout_centerHorizontal="true"
-        android:inputType="0x61" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorSecondary"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@ref/0x7f0d0081"
-        android:layout_width="-2"
-        android:layout_height="-2"
-        android:layout_marginTop="dimension(2817)"
-        android:text="Send"
-        android:layout_below="@ref/0x7f0d0080"
-        android:layout_centerHorizontal="true"
-        android:onClick="sendData" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"/>
 
-    <Button
-        android:id="@ref/0x7f0d0082"
-        android:layout_width="-1"
-        android:layout_height="-2"
-        android:text="Web"
-        android:layout_below="@ref/0x7f0d0081"
-        android:layout_alignParentLeft="true"
-        android:onClick="openItUp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"/>
 
-    <Button
-        android:id="@ref/0x7f0d0083"
-        android:layout_width="dimension(25601)"
-        android:layout_height="dimension(12801)"
-        android:text="Change Mode"
-        android:layout_below="@ref/0x7f0d0084"
-        android:layout_alignParentLeft="true"
-        android:onClick="changeMode" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"/>
+        </LinearLayout>
 
-    <Button
-        android:id="@ref/0x7f0d0085"
-        android:layout_width="-1"
-        android:layout_height="-2"
-        android:layout_marginTop="dimension(12289)"
-        android:text="Phone"
-        android:layout_below="@ref/0x7f0d0081"
-        android:layout_alignParentLeft="true"
-        android:onClick="openItUp" />
-
-    <Button
-        android:id="@ref/0x7f0d0084"
-        android:layout_width="-1"
-        android:layout_height="-2"
-        android:text="Map"
-        android:layout_below="@ref/0x7f0d0085"
-        android:layout_alignLeft="@ref/0x7f0d0085"
-        android:onClick="openItUp" />
-
-    <Button
-        android:id="@ref/0x7f0d0086"
-        android:layout_width="dimension(26881)"
-        android:layout_height="dimension(12801)"
-        android:text="BroadCast Receiver"
-        android:layout_below="@ref/0x7f0d0084"
-        android:layout_alignLeft="@ref/0x7f0d007f"
-        android:onClick="broadcastAndservices" />
-
-    <Button
-        android:id="@ref/0x7f0d0087"
-        android:layout_width="-2"
-        android:layout_height="-2"
-        android:text="Open Notification"
-        android:layout_toRightOf="@ref/0x7f0d007f"
-        android:layout_below="@ref/0x7f0d0084"
-        android:layout_alignParentRight="true"
-        android:onClick="openNotification" />
-
-    <Button
-        android:id="@ref/0x7f0d0088"
-        android:layout_width="dimension(25601)"
-        android:layout_height="dimension(12801)"
-        android:layout_marginTop="dimension(2817)"
-        android:text="SQLite"
-        android:layout_below="@ref/0x7f0d0087"
-        android:layout_alignParentLeft="true"
-        android:onClick="gotoSQLite" />
-</RelativeLayout>
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>
