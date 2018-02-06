@@ -1,7 +1,6 @@
 package com.ankam.rohit.formulate;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.NavUtils;
@@ -9,6 +8,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -25,21 +25,21 @@ import com.ankam.rohit.formulate.RecylcleView.LoadMore;
 import java.util.ArrayList;
 import java.util.UUID;
 
+public class Formula extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
-    private TextView mTextMessage;
-    RecyclerView r1;
     ArrayList<Cards> arrayList=new ArrayList<Cards>();
     Adapter adapter;
     String[] name;
-
+    private TextView mTextMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigation);
+        setContentView(R.layout.activity_formula);
+
+
+
+        //-----navigation code--
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         mTextMessage = (TextView) findViewById(R.id.message);
@@ -51,9 +51,14 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);  name=getResources().getStringArray(R.array.formulas);
+        navigationView.setNavigationItemSelectedListener(this);
+        //----navigation code---
+
+
+
+        name=getResources().getStringArray(R.array.formulas);
         RecyclerView recycle=(RecyclerView)findViewById(R.id.recycle);
-        // randomdata();
+       // randomdata();
 
         int i=0;
         for (String n:name) {
@@ -88,24 +93,20 @@ public class MainActivity extends AppCompatActivity
                     },5000);
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Load data completed. ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Formula.this, "Load data completed. ", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-    }
+        }
 
     private void randomdata() {
         for(int i=0;i<=10;i++){
             String name= UUID.randomUUID().toString();
             Cards item=new Cards(name);
             arrayList.add(item);
-        }
     }
-
-    public void input(View view) {
-        startActivity(new Intent(this,Input.class));
-    }
+}
 
     @Override
     public void onBackPressed() {
@@ -133,7 +134,7 @@ public class MainActivity extends AppCompatActivity
 
 
         //noinspection SimplifiableIfStatement
-      return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -144,8 +145,6 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.form) {
             // Handle the camera action
-//            startActivity(new Intent(this,MainActivity.class));
-            NavUtils.getParentActivityIntent(MainActivity.this);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -162,4 +161,10 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    public void input(View view) {
+        startActivity(new Intent(this,Input.class));
+    }
 }
+
+
+

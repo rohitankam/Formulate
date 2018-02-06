@@ -6,15 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.ankam.rohit.formulate.Matrix_Calc">
 
-    <GridLayout
+    <android.support.v7.widget.GridLayout
         android:id="@+id/gridView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:columnCount="2"
-        android:columnWidth="4dp"
-        android:rowCount="3"
+        app:rowCount="2"
+        app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,26 +23,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:background="@color/colorSecondary"
-            android:layout_height="wrap_content">
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#ffffff"/>
+                android:background="#ffffff" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#ffffff"/>
+                android:background="#ffffff" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#ffffff"/>
-        </LinearLayout>
+                android:background="#ffffff" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" />
 
-    </GridLayout>
+    </android.support.v7.widget.GridLayout>
 </android.support.constraint.ConstraintLayout>

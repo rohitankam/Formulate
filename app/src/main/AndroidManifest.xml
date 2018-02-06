@@ -18,16 +18,17 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Formula" />
+            android:theme="@style/Formula"
+            android:launchMode="singleTop"/>
         <activity
-            android:name=".ActivityFormula"
-            android:theme="@style/Formula" />
+            android:name=".Formula"
+            android:theme="@style/Formula"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".Input"
             android:theme="@style/Formula" />
         <activity
-            android:name=".Matrix_Calc"
-            android:theme="@style/Matrix" />
+            android:name=".Matrix_Calc"/>
 
     </application>
 
